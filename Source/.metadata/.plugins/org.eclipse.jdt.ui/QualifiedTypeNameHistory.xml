@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.repositorys.HibernateBaseDao"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.Authority"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.BlogComment"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.BlogRole"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.BlogType"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.BlogUser"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.LanguageType"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.Script"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.repositorys.IBaseDAO"/>
+<fullyQualifiedTypeName name="com.fhr.ranblog.models.Blog"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>
