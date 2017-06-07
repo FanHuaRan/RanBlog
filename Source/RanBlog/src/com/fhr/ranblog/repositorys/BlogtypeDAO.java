@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.fhr.ranblog.models.Blogtype;
+import com.fhr.ranblog.models.BlogType;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -17,7 +17,7 @@ import com.fhr.ranblog.models.Blogtype;
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see com.fhr.ranblog.models.Blogtype
+ * @see com.fhr.ranblog.models.BlogType
  * @author MyEclipse Persistence Tools
  */
 public class BlogtypeDAO extends HibernateDaoSupport {
@@ -29,7 +29,7 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(Blogtype transientInstance) {
+	public void save(BlogType transientInstance) {
 		log.debug("saving Blogtype instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
@@ -40,7 +40,7 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(Blogtype persistentInstance) {
+	public void delete(BlogType persistentInstance) {
 		log.debug("deleting Blogtype instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
@@ -51,10 +51,10 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Blogtype findById(java.lang.Short id) {
+	public BlogType findById(java.lang.Short id) {
 		log.debug("getting Blogtype instance with id: " + id);
 		try {
-			Blogtype instance = (Blogtype) getHibernateTemplate().get("com.fhr.ranblog.models.Blogtype", id);
+			BlogType instance = (BlogType) getHibernateTemplate().get("com.fhr.ranblog.models.Blogtype", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -62,7 +62,7 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(Blogtype instance) {
+	public List findByExample(BlogType instance) {
 		log.debug("finding Blogtype instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
@@ -100,10 +100,10 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Blogtype merge(Blogtype detachedInstance) {
+	public BlogType merge(BlogType detachedInstance) {
 		log.debug("merging Blogtype instance");
 		try {
-			Blogtype result = (Blogtype) getHibernateTemplate().merge(detachedInstance);
+			BlogType result = (BlogType) getHibernateTemplate().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -112,7 +112,7 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(Blogtype instance) {
+	public void attachDirty(BlogType instance) {
 		log.debug("attaching dirty Blogtype instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
@@ -123,7 +123,7 @@ public class BlogtypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(Blogtype instance) {
+	public void attachClean(BlogType instance) {
 		log.debug("attaching clean Blogtype instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);

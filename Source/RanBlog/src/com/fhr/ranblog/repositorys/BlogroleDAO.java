@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.fhr.ranblog.models.Blogrole;
+import com.fhr.ranblog.models.BlogRole;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -17,7 +17,7 @@ import com.fhr.ranblog.models.Blogrole;
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see com.fhr.ranblog.models.Blogrole
+ * @see com.fhr.ranblog.models.BlogRole
  * @author MyEclipse Persistence Tools
  */
 public class BlogroleDAO extends HibernateDaoSupport {
@@ -29,7 +29,7 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(Blogrole transientInstance) {
+	public void save(BlogRole transientInstance) {
 		log.debug("saving Blogrole instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
@@ -40,7 +40,7 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(Blogrole persistentInstance) {
+	public void delete(BlogRole persistentInstance) {
 		log.debug("deleting Blogrole instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
@@ -51,10 +51,10 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Blogrole findById(java.lang.Short id) {
+	public BlogRole findById(java.lang.Short id) {
 		log.debug("getting Blogrole instance with id: " + id);
 		try {
-			Blogrole instance = (Blogrole) getHibernateTemplate().get("com.fhr.ranblog.models.Blogrole", id);
+			BlogRole instance = (BlogRole) getHibernateTemplate().get("com.fhr.ranblog.models.Blogrole", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -62,7 +62,7 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(Blogrole instance) {
+	public List findByExample(BlogRole instance) {
 		log.debug("finding Blogrole instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
@@ -100,10 +100,10 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Blogrole merge(Blogrole detachedInstance) {
+	public BlogRole merge(BlogRole detachedInstance) {
 		log.debug("merging Blogrole instance");
 		try {
-			Blogrole result = (Blogrole) getHibernateTemplate().merge(detachedInstance);
+			BlogRole result = (BlogRole) getHibernateTemplate().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -112,7 +112,7 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(Blogrole instance) {
+	public void attachDirty(BlogRole instance) {
 		log.debug("attaching dirty Blogrole instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
@@ -123,7 +123,7 @@ public class BlogroleDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(Blogrole instance) {
+	public void attachClean(BlogRole instance) {
 		log.debug("attaching clean Blogrole instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);

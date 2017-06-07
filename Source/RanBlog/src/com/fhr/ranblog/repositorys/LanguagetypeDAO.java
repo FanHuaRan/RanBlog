@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.fhr.ranblog.models.Languagetype;
+import com.fhr.ranblog.models.LanguageType;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -17,7 +17,7 @@ import com.fhr.ranblog.models.Languagetype;
  * transactions. Each of these methods provides additional information for how
  * to configure it for the desired type of transaction control.
  * 
- * @see com.fhr.ranblog.models.Languagetype
+ * @see com.fhr.ranblog.models.LanguageType
  * @author MyEclipse Persistence Tools
  */
 public class LanguagetypeDAO extends HibernateDaoSupport {
@@ -29,7 +29,7 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(Languagetype transientInstance) {
+	public void save(LanguageType transientInstance) {
 		log.debug("saving Languagetype instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
@@ -40,7 +40,7 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(Languagetype persistentInstance) {
+	public void delete(LanguageType persistentInstance) {
 		log.debug("deleting Languagetype instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
@@ -51,10 +51,10 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Languagetype findById(java.lang.Long id) {
+	public LanguageType findById(java.lang.Long id) {
 		log.debug("getting Languagetype instance with id: " + id);
 		try {
-			Languagetype instance = (Languagetype) getHibernateTemplate().get("com.fhr.ranblog.models.Languagetype",
+			LanguageType instance = (LanguageType) getHibernateTemplate().get("com.fhr.ranblog.models.Languagetype",
 					id);
 			return instance;
 		} catch (RuntimeException re) {
@@ -63,7 +63,7 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(Languagetype instance) {
+	public List findByExample(LanguageType instance) {
 		log.debug("finding Languagetype instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
@@ -101,10 +101,10 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Languagetype merge(Languagetype detachedInstance) {
+	public LanguageType merge(LanguageType detachedInstance) {
 		log.debug("merging Languagetype instance");
 		try {
-			Languagetype result = (Languagetype) getHibernateTemplate().merge(detachedInstance);
+			LanguageType result = (LanguageType) getHibernateTemplate().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -113,7 +113,7 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(Languagetype instance) {
+	public void attachDirty(LanguageType instance) {
 		log.debug("attaching dirty Languagetype instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
@@ -124,7 +124,7 @@ public class LanguagetypeDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(Languagetype instance) {
+	public void attachClean(LanguageType instance) {
 		log.debug("attaching clean Languagetype instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);

@@ -1,14 +1,14 @@
 package com.fhr.ranblog.repositorys;
 
-import java.sql.Timestamp;
 import java.util.List;
+
 import org.hibernate.LockMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.fhr.ranblog.models.Blogcomment;
+import com.fhr.ranblog.models.BlogComment;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -32,7 +32,7 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(Blogcomment transientInstance) {
+	public void save(BlogComment transientInstance) {
 		log.debug("saving Blogcomment instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
@@ -43,7 +43,7 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(Blogcomment persistentInstance) {
+	public void delete(BlogComment persistentInstance) {
 		log.debug("deleting Blogcomment instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
@@ -54,10 +54,10 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Blogcomment findById(java.lang.Long id) {
+	public BlogComment findById(java.lang.Long id) {
 		log.debug("getting Blogcomment instance with id: " + id);
 		try {
-			Blogcomment instance = (Blogcomment) getHibernateTemplate().get("com.fhr.ranblog.models.Blogcomment", id);
+			BlogComment instance = (BlogComment) getHibernateTemplate().get("com.fhr.ranblog.models.BlogComment", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -65,7 +65,7 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(Blogcomment instance) {
+	public List findByExample(BlogComment instance) {
 		log.debug("finding Blogcomment instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
@@ -111,10 +111,10 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Blogcomment merge(Blogcomment detachedInstance) {
+	public BlogComment merge(BlogComment detachedInstance) {
 		log.debug("merging Blogcomment instance");
 		try {
-			Blogcomment result = (Blogcomment) getHibernateTemplate().merge(detachedInstance);
+			BlogComment result = (BlogComment) getHibernateTemplate().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -123,7 +123,7 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(Blogcomment instance) {
+	public void attachDirty(BlogComment instance) {
 		log.debug("attaching dirty Blogcomment instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
@@ -134,7 +134,7 @@ public class BlogcommentDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(Blogcomment instance) {
+	public void attachClean(BlogComment instance) {
 		log.debug("attaching clean Blogcomment instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);

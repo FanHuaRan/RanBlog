@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.fhr.ranblog.models.Bloguser;
+import com.fhr.ranblog.models.BlogUser;
 
 /**
  * A data access object (DAO) providing persistence and search support for
@@ -18,7 +18,7 @@ import com.fhr.ranblog.models.Bloguser;
  * methods provides additional information for how to configure it for the
  * desired type of transaction control.
  * 
- * @see com.fhr.ranblog.models.Bloguser
+ * @see com.fhr.ranblog.models.BlogUser
  * @author MyEclipse Persistence Tools
  */
 public class BloguserDAO extends HibernateDaoSupport {
@@ -32,7 +32,7 @@ public class BloguserDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
-	public void save(Bloguser transientInstance) {
+	public void save(BlogUser transientInstance) {
 		log.debug("saving Bloguser instance");
 		try {
 			getHibernateTemplate().save(transientInstance);
@@ -43,7 +43,7 @@ public class BloguserDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void delete(Bloguser persistentInstance) {
+	public void delete(BlogUser persistentInstance) {
 		log.debug("deleting Bloguser instance");
 		try {
 			getHibernateTemplate().delete(persistentInstance);
@@ -54,10 +54,10 @@ public class BloguserDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Bloguser findById(java.lang.Integer id) {
+	public BlogUser findById(java.lang.Integer id) {
 		log.debug("getting Bloguser instance with id: " + id);
 		try {
-			Bloguser instance = (Bloguser) getHibernateTemplate().get("com.fhr.ranblog.models.Bloguser", id);
+			BlogUser instance = (BlogUser) getHibernateTemplate().get("com.fhr.ranblog.models.Bloguser", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -65,7 +65,7 @@ public class BloguserDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public List findByExample(Bloguser instance) {
+	public List findByExample(BlogUser instance) {
 		log.debug("finding Bloguser instance by example");
 		try {
 			List results = getHibernateTemplate().findByExample(instance);
@@ -111,10 +111,10 @@ public class BloguserDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public Bloguser merge(Bloguser detachedInstance) {
+	public BlogUser merge(BlogUser detachedInstance) {
 		log.debug("merging Bloguser instance");
 		try {
-			Bloguser result = (Bloguser) getHibernateTemplate().merge(detachedInstance);
+			BlogUser result = (BlogUser) getHibernateTemplate().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -123,7 +123,7 @@ public class BloguserDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachDirty(Bloguser instance) {
+	public void attachDirty(BlogUser instance) {
 		log.debug("attaching dirty Bloguser instance");
 		try {
 			getHibernateTemplate().saveOrUpdate(instance);
@@ -134,7 +134,7 @@ public class BloguserDAO extends HibernateDaoSupport {
 		}
 	}
 
-	public void attachClean(Bloguser instance) {
+	public void attachClean(BlogUser instance) {
 		log.debug("attaching clean Bloguser instance");
 		try {
 			getHibernateTemplate().lock(instance, LockMode.NONE);
