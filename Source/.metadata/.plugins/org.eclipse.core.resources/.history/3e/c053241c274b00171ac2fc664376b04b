@@ -1,0 +1,13 @@
+package com.fhr.ranblog.repositorys;
+
+import java.util.List;
+
+public interface IBlogCommentDAO {
+
+	List findByBlogUserId(Object blogUserId);
+
+	List findByBlogId(Object blogId);
+
+	List findByBlogComment(Object blogComment);
+
+}

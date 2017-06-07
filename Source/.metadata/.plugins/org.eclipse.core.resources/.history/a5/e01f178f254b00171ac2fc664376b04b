@@ -1,0 +1,13 @@
+package com.fhr.ranblog.repositorys.impl;
+
+import java.util.List;
+
+import com.fhr.ranblog.models.Authority;
+
+public interface IAuthorityDAO {
+
+	List<Authority> findByBlogUserId(Object blogUserId);
+
+	List<Authority> findByBlogRoleId(Object blogRoleId);
+
+}

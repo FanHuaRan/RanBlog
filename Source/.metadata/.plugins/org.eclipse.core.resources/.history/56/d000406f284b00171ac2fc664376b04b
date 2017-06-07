@@ -1,0 +1,15 @@
+package com.fhr.ranblog.repositorys;
+
+import java.util.List;
+
+import com.fhr.ranblog.models.Script;
+
+public interface IScriptDAO {
+
+	List<Script> findByLanguageTypeId(Object languageTypeId);
+
+	List<Script> findByScriptName(Object scriptName);
+
+	List<Script> findByScriptContent(Object scriptContent);
+
+}

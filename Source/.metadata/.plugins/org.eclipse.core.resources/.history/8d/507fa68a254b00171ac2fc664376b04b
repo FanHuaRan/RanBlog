@@ -1,0 +1,32 @@
+package com.fhr.ranblog.repositorys.impl;
+
+import java.util.List;
+import org.hibernate.LockMode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.fhr.ranblog.models.Authority;
+import com.fhr.ranblog.repositorys.HibernateBaseDAO;
+
+/**
+ * Authority仓库
+ * 
+ * @see com.fhr.ranblog.models.Authority
+ * @see com.fhr.ranblog.repositorys.HibernateBaseDao<T>
+ * @author fhr
+ */
+public class AuthorityDAO extends  HibernateBaseDAO<Authority> {
+	// property constants
+	public static final String BLOG_USER_ID = "blogUserId";
+	public static final String BLOG_ROLE_ID = "blogRoleId";
+	
+	public List<Authority> findByBlogUserId(Object blogUserId) {
+		return findByProperty(BLOG_USER_ID, blogUserId);
+	}
+
+	public List<Authority> findByBlogRoleId(Object blogRoleId) {
+		return findByProperty(BLOG_ROLE_ID, blogRoleId);
+	}
+}

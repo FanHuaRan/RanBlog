@@ -45,21 +45,19 @@
 		</property>
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">
-					org.hibernate.dialect.MySQLDialect
-				</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 			</props>
 		</property>
 			<property name="mappingResources">
 			<list>
-			    <value>com/zml/shsite/models/Authority.hbm.xml</value>
-			    <value>com/zml/shsite/models/Goodtype.hbm.xml</value>
-				<value>com/zml/shsite/models/Shrole.hbm.xml</value>
-				<value>com/zml/shsite/models/Shuser.hbm.xml</value>
-				<value>com/zml/shsite/models/Goodcomment.hbm.xml</value>
-				<value>com/zml/shsite/models/Announcement.hbm.xml</value>
-				<value>com/zml/shsite/models/Goodcollect.hbm.xml</value>
-				<value>com/zml/shsite/models/Good.hbm.xml</value>
+			    <value>com/fhr/ranblog/models/Blog.hbm.xml</value>
+				<value>com/fhr/ranblog/models/BlogComment.hbm.xml</value>
+				<value>com/fhr/ranblog/models/BlogRole.hbm.xml</value>
+				<value>com/fhr/ranblog/models/Script.hbm.xml</value>
+				<value>com/fhr/ranblog/models/LanguageType.hbm.xml</value>
+				<value>com/fhr/ranblog/models/Authority.hbm.xml</value>
+				<value>com/fhr/ranblog/models/BlogType.hbm.xml</value>
+				<value>com/fhr/ranblog/models/BlogUser.hbm.xml</value>
 			</list>
 		</property>
 	</bean>

@@ -1,0 +1,30 @@
+package com.fhr.ranblog.repositorys;
+
+import java.util.List;
+import org.hibernate.LockMode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.fhr.ranblog.models.BlogRole;
+
+/**
+ * A data access object (DAO) providing persistence and search support for
+ * Blogrole entities. Transaction control of the save(), update() and delete()
+ * operations can directly support Spring container-managed transactions or they
+ * can be augmented to handle user-managed Spring transactions. Each of these
+ * methods provides additional information for how to configure it for the
+ * desired type of transaction control.
+ * 
+ * @see com.fhr.ranblog.models.BlogRole
+ * @author MyEclipse Persistence Tools
+ */
+public class BlogroleDAO extends HibernateBaseDao<BlogRole> {
+	// property constants
+	public static final String BLOG_ROLE_NAME = "blogRoleName";
+
+	public List<BlogRole> findByBlogRoleName(Object blogRoleName) {
+		return findByProperty(BLOG_ROLE_NAME, blogRoleName);
+	}
+}

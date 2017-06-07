@@ -1,0 +1,61 @@
+package com.fhr.ranblog.repositorys;
+
+import java.util.List;
+
+import org.hibernate.LockMode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+
+import com.fhr.ranblog.models.Blog;
+
+/**
+ * A data access object (DAO) providing persistence and search support for Blog
+ * entities. Transaction control of the save(), update() and delete() operations
+ * can directly support Spring container-managed transactions or they can be
+ * augmented to handle user-managed Spring transactions. Each of these methods
+ * provides additional information for how to configure it for the desired type
+ * of transaction control.
+ * 
+ * @see com.fhr.ranblog.models.Blog
+ * @author MyEclipse Persistence Tools
+ */
+public class BlogDAO extends HibernateBaseDao<Blog> {
+	// property constants
+	public static final String BLOG_TYPE_ID = "blogTypeId";
+	public static final String TITLE = "title";
+	public static final String DIGEST = "digest";
+	public static final String CONTENT = "content";
+	public static final String PAGE_VIEW = "pageView";
+	public static final String COMMENT_COUNT = "commentCount";
+	public static final String KEYWORDS = "keywords";
+
+	public List<Blog> findByBlogTypeId(Object blogTypeId) {
+		return findByProperty(BLOG_TYPE_ID, blogTypeId);
+	}
+
+	public List<Blog> findByTitle(Object title) {
+		return findByProperty(TITLE, title);
+	}
+
+	public List<Blog> findByDigest(Object digest) {
+		return findByProperty(DIGEST, digest);
+	}
+
+	public List<Blog> findByContent(Object content) {
+		return findByProperty(CONTENT, content);
+	}
+
+	public List<Blog> findByPageView(Object pageView) {
+		return findByProperty(PAGE_VIEW, pageView);
+	}
+
+	public List<Blog> findByCommentCount(Object commentCount) {
+		return findByProperty(COMMENT_COUNT, commentCount);
+	}
+
+	public List<Blog> findByKeywords(Object keywords) {
+		return findByProperty(KEYWORDS, keywords);
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.fhr.ranblog.repositorys.impl;
+
+import java.util.List;
+
+import com.fhr.ranblog.models.BlogRole;
+
+public interface IBlogRoleDAO {
+
+	List<BlogRole> findByBlogRoleName(Object blogRoleName);
+
+}
