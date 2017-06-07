@@ -46,13 +46,4 @@ public class BlogType implements java.io.Serializable {
 		this.blogTypeName = blogTypeName;
 	}
 
-	public Long getBlogCount() {
-		return blogCount;
-	}
-
-	public void setBlogCount(Long blogCount) {
-		this.blogCount = blogCount;
-	}
-	
-
 }

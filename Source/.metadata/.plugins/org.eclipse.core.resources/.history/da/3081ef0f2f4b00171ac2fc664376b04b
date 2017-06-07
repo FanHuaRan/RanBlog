@@ -10,11 +10,8 @@
             <column name="BlogTypeId" />
             <generator class="identity" />
         </id>
-        <property name="blogTypeName" type="java.lang.Stringr">
+        <property name="blogTypeName" type="java.lang.Integer">
             <column name="BlogTypeName" not-null="true" />
-        </property>
-        <property name="blogCount" type="java.lang.Long">
-            <column name="BlogCount" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2017/6/7 0:02:49                             */
+/* Created on:     2017/6/7 11:05:39                            */
 /*==============================================================*/
 
 
@@ -25,7 +25,7 @@ drop table if exists Script;
 /*==============================================================*/
 create table Authority
 (
-   AuthorityId          bigint not null auto_increment,
+   AuthorityId          bigint not null,
    BlogUserId           int not null,
    BlogRoleId           smallint not null,
    primary key (AuthorityId)
@@ -37,13 +37,12 @@ create table Authority
 create table Blog
 (
    BlogId               int not null auto_increment,
-   BlogTypeId           smallint not null,
    Title                varchar(40) not null,
    Digest               varchar(100) not null,
    Content              varchar(5000) not null,
    PublishTime          datetime not null,
    PageView             bigint not null,
-   CommentCount         bigint not null,
+   CommentCount         bigint not null default 0,
    keywords             varchar(50) not null,
    primary key (BlogId)
 );
@@ -80,9 +79,12 @@ create table BlogRole
 create table BlogType
 (
    BlogTypeId           smallint not null auto_increment,
-   BlogTypeName         int not null,
+   BlogTypeName         varchar(30) not null,
+   BlogCount            bigint not null default 0,
    primary key (BlogTypeId)
 );
+
+alter table BlogType comment '博客数:用触发器实现';
 
 /*==============================================================*/
 /* Table: BlogUser                                              */

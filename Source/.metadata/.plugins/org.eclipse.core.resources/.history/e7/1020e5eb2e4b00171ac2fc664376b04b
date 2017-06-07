@@ -14,8 +14,8 @@ public class BlogType implements java.io.Serializable {
 	// Fields
 
 	private Short blogTypeId;
-	private String blogTypeName;
-	private Long blogCount;
+	private Integer blogTypeName;
+
 	// Constructors
 
 	/** default constructor */
@@ -23,9 +23,8 @@ public class BlogType implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public BlogType(String blogTypeName,Long blogCount) {
+	public BlogType(Integer blogTypeName) {
 		this.blogTypeName = blogTypeName;
-		this.blogCount=blogCount;
 	}
 
 	// Property accessors
@@ -38,21 +37,12 @@ public class BlogType implements java.io.Serializable {
 		this.blogTypeId = blogTypeId;
 	}
 
-	public String getBlogTypeName() {
+	public Integer getBlogTypeName() {
 		return this.blogTypeName;
 	}
 
-	public void setBlogTypeName(String blogTypeName) {
+	public void setBlogTypeName(Integer blogTypeName) {
 		this.blogTypeName = blogTypeName;
 	}
-
-	public Long getBlogCount() {
-		return blogCount;
-	}
-
-	public void setBlogCount(Long blogCount) {
-		this.blogCount = blogCount;
-	}
-	
 
 }
