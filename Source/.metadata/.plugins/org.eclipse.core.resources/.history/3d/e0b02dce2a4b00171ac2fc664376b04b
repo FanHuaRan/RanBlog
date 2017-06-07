@@ -2,12 +2,7 @@ package com.fhr.ranblog.repositorys;
 
 import java.io.Serializable;
 import java.util.List;
-/**
- * DAO基本接口
- * 
- * @author fhr
- * @param <T>
- */
+
 public interface IBaseDAO<T extends Serializable> {
 
 	void save(T transientInstance);

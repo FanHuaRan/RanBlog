@@ -61,13 +61,6 @@
 			</list>
 		</property>
 	</bean>
-	<!--基于连接池的事务管理器 -->  
-	<bean id="txManager"  
-	    class="org.springframework.jdbc.datasource.DataSourceTransactionManager">   
-	    <property name="dataSource" ref="dataSource" />  
-	</bean>  
-	<!-- 事物注解驱动 -->  
-	<tx:annotation-driven transaction-manager="txManager" />  
 	  <!-- 启用Spring注解 -->
     <context:annotation-config />
     <!-- 扫描注解 将Bean进行注册 -->
