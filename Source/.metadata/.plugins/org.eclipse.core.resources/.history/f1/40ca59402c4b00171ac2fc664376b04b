@@ -6,11 +6,6 @@ package com.fhr.ranblog.models;
 
 public class LanguageType implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 8536289096356571165L;
-	
 	// Fields
 
 	private Long languageTypeId;

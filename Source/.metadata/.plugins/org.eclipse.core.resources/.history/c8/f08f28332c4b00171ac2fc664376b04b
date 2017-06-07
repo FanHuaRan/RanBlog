@@ -6,10 +6,7 @@ package com.fhr.ranblog.models;
 
 public class BlogType implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 3982255907580119520L;
+	
 	
 	// Fields
 

@@ -5,13 +5,7 @@ package com.fhr.ranblog.models;
  */
 
 public class Authority implements java.io.Serializable {
-	
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -1373423981294736953L;
-	
 	// Fields
 
 	private Long authorityId;

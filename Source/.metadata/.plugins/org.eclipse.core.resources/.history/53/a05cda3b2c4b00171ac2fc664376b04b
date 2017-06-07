@@ -8,10 +8,7 @@ import java.sql.Timestamp;
 
 public class BlogUser implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -5515493648430259225L;
+	
 	
 	// Fields
 
