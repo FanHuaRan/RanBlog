@@ -28,3 +28,16 @@
 1496801322897	Extract interface 'ILanguageTypeDAO'
 1496801352501	Extract interface 'IScriptDAO'
 1496801363681	Move compilation units
+1496835830562	Delete element
+1496836112883	Delete elements
+1496836303542	Delete element
+1496836310498	Rename resource 'sticky-footer-navbar.css'
+1496836575917	Rename resource 'header.jsp'
+1496836626029	Rename resource 'footer.jsp'
+1496836642905	Rename resource 'header1.jsp'
+1496837953782	Move 'kindeditor' to 'view'
+1496838001359	Move 2 resources to 'code'
+1496838012078	Move 'kitchen-sink' to 'code'
+1496838017483	Move 'kindeditor' to 'view'
+1496838198956	Delete element
+1496883546083	Move 'kindeditor' to 'WebContent'
