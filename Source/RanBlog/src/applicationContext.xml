@@ -18,12 +18,8 @@
 	<!-- C3P0连接池 -->
      <bean id="dataSource"
 	  class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		  <property name="driverClass"
-		   value="com.mysql.jdbc.Driver">
-		  </property>
-		  <property name="jdbcUrl"
-		   value="jdbc:mysql://localhost:3306/ranblog">
-		  </property>
+		  <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		  <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ranblog"></property>
 		  <property name="user" value="root"></property>
 		  <property name="password" value="123"></property>
 		  <property name="minPoolSize"><value>1</value></property>
@@ -61,11 +57,10 @@
 			</list>
 		</property>
 	</bean>
-	<!--基于连接池的事务管理器 -->  
-	<bean id="txManager"  
-	    class="org.springframework.jdbc.datasource.DataSourceTransactionManager">   
-	    <property name="dataSource" ref="dataSource" />  
-	</bean>  
+	  <!--基于Hibernate的事务管理器 -->
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"> 
+		<property name="sessionFactory" ref="sessionFactory" />
+	 </bean>  
 	<!-- 事物注解驱动 -->  
 	<tx:annotation-driven transaction-manager="txManager" />  
 	  <!-- 启用Spring注解 -->

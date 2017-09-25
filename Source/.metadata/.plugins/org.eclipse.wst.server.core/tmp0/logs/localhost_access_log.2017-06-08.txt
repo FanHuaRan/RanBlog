@@ -46,3 +46,8 @@
 127.0.0.1 - - [08/Jun/2017:08:59:22 +0800] "GET /RanBlog/kindeditor/lang/zh_CN.js HTTP/1.1" 304 -
 127.0.0.1 - - [08/Jun/2017:08:59:22 +0800] "GET /RanBlog/kindeditor/themes/default/default.png HTTP/1.1" 304 -
 127.0.0.1 - - [08/Jun/2017:09:09:22 +0800] "GET /RanBlog/index HTTP/1.1" 200 3919
+127.0.0.1 - - [08/Jun/2017:09:23:24 +0800] "GET /RanBlog/index HTTP/1.1" 200 3919
+127.0.0.1 - - [08/Jun/2017:09:23:24 +0800] "GET /RanBlog/css/bootstrap.min.css HTTP/1.1" 200 99961
+127.0.0.1 - - [08/Jun/2017:09:23:24 +0800] "GET /RanBlog/css/site.css HTTP/1.1" 200 678
+127.0.0.1 - - [08/Jun/2017:09:23:24 +0800] "GET /RanBlog/js/jquery-1.10.2.js HTTP/1.1" 200 273990
+127.0.0.1 - - [08/Jun/2017:09:23:24 +0800] "GET /RanBlog/js/bootstrap.min.js HTTP/1.1" 200 29110
